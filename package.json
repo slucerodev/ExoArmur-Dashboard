@@ -1,12 +1,32 @@
 {
   "name": "exoarmur-dashboard",
-  "version": "2.0.2",
+  "version": "0.1.0",
+  "description": "Web UI for ExoArmur-Core — live governance visibility, audit streams, and replay inspection.",
+  "license": "Apache-2.0",
+  "author": "ExoArmur Team",
+  "homepage": "https://github.com/slucerodev/ExoArmur-Dashboard",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slucerodev/ExoArmur-Dashboard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/slucerodev/ExoArmur-Dashboard/issues"
+  },
+  "keywords": [
+    "exoarmur",
+    "governance",
+    "audit",
+    "nextjs",
+    "dashboard",
+    "ai-safety"
+  ],
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",
