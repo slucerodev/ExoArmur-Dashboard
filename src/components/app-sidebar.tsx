@@ -23,6 +23,7 @@ import {
   SidebarFooter,
 } from "@/components/ui/sidebar";
 import { cn } from "@/lib/utils";
+import { useHealth } from "@/lib/hooks";
 
 const navItems = [
   { icon: LayoutDashboard, label: "Dashboard", href: "/" },
@@ -36,6 +37,8 @@ const navItems = [
 
 export function AppSidebar() {
   const pathname = usePathname();
+  const { data: health } = useHealth();
+  const versionLabel = health?.version ? `v${health.version}` : "—";
 
   return (
     <Sidebar>
@@ -66,8 +69,11 @@ export function AppSidebar() {
             <span className="text-sm font-bold tracking-tight leading-none">
               ExoArmur
             </span>
-            <span className="text-[10px] text-muted-foreground leading-none mt-0.5">
-              v2.0.2
+            <span
+              className="text-[10px] text-muted-foreground leading-none mt-0.5"
+              title="Backend version from /health"
+            >
+              {versionLabel}
             </span>
           </div>
         </div>

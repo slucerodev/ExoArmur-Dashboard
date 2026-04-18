@@ -134,4 +134,5 @@ export interface TelemetryEvent {
 export interface HealthResponse {
   status: string;
   service: string;
+  version?: string;
 }
